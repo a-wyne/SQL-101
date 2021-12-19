@@ -1,0 +1,21 @@
+--#SET TERMINATOR @
+CREATE OR REPLACE PROCEDURE UPDATE_LEADERS_SCORE (
+IN in_School_ID INTEGER, 
+IN in_Leader_SCORE INTEGER)
+	
+LANGUAGE SQL
+MODIFIES SQL DATA
+	
+BEGIN
+	
+	UPDATE SCHOOLS
+	SET Leaders_Score = in_Leader_Score
+	WHERE School_ID = in_School_ID;
+	
+END
+
+@
+
+
+
+
